@@ -1,0 +1,54 @@
+users
+- id (PK)
+- name
+- email
+- password
+- remember_token
+- created_at
+- updated_at
+
+boards
+- id (PK)
+- user_id (FK to users.id)
+- name
+- created_at
+- updated_at
+
+tasks
+- id (PK)
+- board_id (FK to boards.id)
+- title
+- description
+- status (được sử dụng để định trạng thái của task, ví dụ: "to-do", "in-progress", "done")
+- created_by (FK to users.id, người tạo task)
+- assigned_to (FK to users.id, người được giao task)
+- created_at
+- updated_at
+
+board_user
+- id (PK)
+- board_id (FK to boards.id)
+- user_id (FK to users.id)
+- created_at
+- updated_at
+
+Mỗi người dùng có thể tạo nhiều boards (1-n).
+Mỗi board thuộc về một người dùng (1-n).
+Mỗi task thuộc về một board (1-n).
+Mỗi task được tạo bởi một người dùng (1-n).
+Mỗi task có thể được giao cho một hoặc nhiều người dùng (n-n).
+Một người dùng có thể tham gia vào nhiều boards (n-n).
+
+{groupId: 139, taskData: {…}, userIdCreate: 1}
+groupId
+: 
+139
+taskData
+: 
+{id: 15, board_id: 139, title: 'Đi vịn', status: 'to-do', iduser_created_by: 1, …}
+userIdCreate
+: 
+1
+[[Prototype]]
+: 
+Object
