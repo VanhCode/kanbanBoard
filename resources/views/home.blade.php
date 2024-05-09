@@ -14,7 +14,9 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <div class="alert alert-primary">
+                        Xin chào: {{ Auth::user()->name }}
+                    </div>
                 </div>
             </div>
         </div>

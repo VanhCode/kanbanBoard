@@ -524,7 +524,7 @@
         });
 
         drake.on("drag", function(el) {
-            
+
         });
 
         drake.on("drop", function(el, target, source, sibling) {
@@ -716,7 +716,8 @@
                     });
                 })
 
-            });
+            })
+
         });
 
         Echo.private('tasks.' + boardId)
